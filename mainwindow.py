@@ -22,7 +22,7 @@ class MainWindow(QMainWindow):
       
     
        # plot button
-        button=QPushButton("Press ME")
+        button=QPushButton("Plot")
         button.clicked.connect(self.button_clikced)
 
         #setting slope,intercept labels 
@@ -58,7 +58,7 @@ class MainWindow(QMainWindow):
             text2=self.line_2.text()
             x = float(text1) if text1 else 0
             y = float(text2) if text2 else 0
-            xx = [0,100]
+            xx = [-100,100]
             yy=[xx[0]*x+y,xx[1]*x+y ]
             l = pg.mkPen(color=(255, 0, 0))
             self.graphWidget.plot(xx, yy,pen=l,symbol='+',symbolsize=30)
